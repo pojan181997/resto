@@ -1,0 +1,173 @@
+/* Menggunakan warna khas Minang dan Jawa */
+:root {
+    --background-dark: #5C3B1E;
+    --background-light: #F4E1C4;
+    --primary-color: #5C3B1E;
+    --secondary-color: #FFD700;
+    --text-light: #FFFFFF;
+    --text-dark: #2F2F2F;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, var(--background-dark), var(--background-light));
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: var(--text-light);
+}
+
+.container {
+    display: flex;
+    width: 900px;
+    max-width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(163, 41, 41, 0.5);
+    background: var(--background-light);
+}
+
+/* FORM CONTAINER */
+.form-container {
+    width: 50%;
+    padding: 40px;
+    background: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+}
+
+.form-container label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: var(--text-light);
+    align-self: flex-start;
+}
+
+.form-container input, select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 5px;
+    font-size: 14px;
+    background: var(--background-dark);
+    color: var(--text-light);
+    transition: 0.3s;
+}
+
+.form-container input:focus, select:focus {
+    border-color: #D4AF37;
+    outline: none;
+}
+
+.form-container button {
+    padding: 12px;
+    width: 100%;
+    background: var(--secondary-color);
+    border: none;
+    border-radius: 5px;
+    color: var(--text-dark);
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-container button:hover {
+    background: #D4AF37;
+}
+
+.form-container p {
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+.form-container a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* IMAGE CONTAINER */
+.image-container {
+    width: 50%;
+    background: var(--background-dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+}
+
+.image-container h2 {
+    font-size: 26px;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid var(--secondary-color);
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    cursor: pointer;
+    appearance: none; /* Menghilangkan gaya default browser */
+    -webkit-appearance: none; /* Untuk Safari & Chrome */
+    -moz-appearance: none; /* Untuk Firefox */
+}
+
+select:focus {
+    border-color: #D4AF37;
+    outline: none;
+}
+
+option {
+    font-size: 16px;
+    background: var(--background-light);
+    color: var(--text-dark);
+}
+
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 90%;
+    }
+    
+    .form-container, .image-container {
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .form-container h1 {
+        font-size: 24px;
+    }
+
+    .image-container h2 {
+        font-size: 22px;
+    }
+}
